@@ -5,10 +5,11 @@ import logo from "../logo.svg";
 
 import { routes } from "./routes";
 import { Suspense } from "react";
+import { FullLoading } from "../01-lazyload/components/FullLoading";
 
 export const Navigation = () => {
   return (
-    <Suspense fallback={<h1>Loading...</h1>}>
+    <Suspense fallback={<FullLoading />}>
       <BrowserRouter>
         <div className="main-layout">
           <nav>
