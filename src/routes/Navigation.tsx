@@ -2,6 +2,7 @@ import { BrowserRouter } from "react-router-dom";
 import { Routes, Route, NavLink, Navigate } from "react-router-dom";
 
 import logo from "../logo.svg";
+import { ShoppingPage } from "../02-component-patters/pages/ShoppingPage";
 
 export const Navigation = () => {
   return (
@@ -38,7 +39,7 @@ export const Navigation = () => {
         </nav>
 
         <Routes>
-          <Route path="/" element={<h1>Home</h1>} />
+          <Route path="/" element={<ShoppingPage />} />
           <Route path="/users" element={<h1>Users</h1>} />
           <Route path="/about" element={<h1>About</h1>} />
 
