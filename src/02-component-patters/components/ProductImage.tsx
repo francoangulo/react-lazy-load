@@ -5,12 +5,29 @@ import productImgFallback from "../assets/no-image.jpg";
 
 import styles from "../styles/styles.module.css";
 
-export const ProductImage = ({ img: imgProp = "" }) => {
+export interface Props {
+  className?: string;
+  img?: string;
+  style?: React.CSSProperties;
+}
+
+export const ProductImage = ({
+  className: customClassName,
+  img: imgProp = "",
+  style,
+}: Props) => {
   const {
     product: { img: imgContext },
   } = useContext(ProductContext);
 
   const imgToShow = imgProp || imgContext || productImgFallback;
 
-  return <img src={imgToShow} alt="Product" className={styles.productImg} />;
+  return (
+    <img
+      src={imgToShow}
+      alt="Product"
+      className={`${styles.productImg} ${customClassName}`}
+      style={style}
+    />
+  );
 };
