@@ -21,3 +21,9 @@
   border-color: white;
   border-width: 2px;
 }
+
+.shopping-cart {
+  position: fixed;
+  right: 10px;
+  top: 0;
+}
