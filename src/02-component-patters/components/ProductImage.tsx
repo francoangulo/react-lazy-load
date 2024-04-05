@@ -16,11 +16,9 @@ export const ProductImage = ({
   img: imgProp = "",
   style,
 }: Props) => {
-  const {
-    product: { img: imgContext },
-  } = useContext(ProductContext);
+  const { product } = useContext(ProductContext);
 
-  const imgToShow = imgProp || imgContext || productImgFallback;
+  const imgToShow = imgProp || product?.img || productImgFallback;
 
   return (
     <img
