@@ -1,0 +1,70 @@
+[
+  {
+    "type": "text",
+    "name": "firstName",
+    "placeholder": "Franco",
+    "label": "First Name",
+    "value": "",
+    "validations": [
+      { "type": "required", "message": "This field is required" },
+      {
+        "type": "minLength",
+        "value": 3,
+        "message": "This field must have at least 3 characters"
+      },
+      {
+        "type": "maxLength",
+        "value": 10,
+        "message": "This field must have at most 10 characters"
+      }
+    ]
+  },
+  {
+    "type": "text",
+    "name": "lastName",
+    "placeholder": "Angulo",
+    "label": "Last Name",
+    "value": "",
+    "validations": [
+      { "type": "required", "message": "This field is required" },
+      {
+        "type": "minLength",
+        "value": 3,
+        "message": "This field must have at least 3 characters"
+      },
+      {
+        "type": "maxLength",
+        "value": 10,
+        "message": "This field must have at most 10 characters"
+      }
+    ]
+  },
+  {
+    "type": "email",
+    "name": "email",
+    "placeholder": "email@example.com",
+    "label": "Email",
+    "value": "",
+    "validations": [
+      { "type": "required", "message": "This field is required" },
+      { "type": "email", "message": "This field must be an email" }
+    ]
+  },
+  {
+    "type": "select",
+    "name": "favoriteGame",
+    "label": "Favorite Game",
+    "value": "",
+    "options": [
+      { "id": 1, "label": "Super Mario Bros" },
+      { "id": 2, "label": "Super Smash" },
+      { "id": 3, "label": "Resident Evil" },
+      { "id": 4, "label": "Zelda" },
+      { "id": 5, "label": "Final Fantasy" },
+      { "id": 6, "label": "Metal Gear Solid" },
+      { "id": 7, "label": "Street Fighter" },
+      { "id": 8, "label": "Mortal Kombat" }
+    ],
+    "validations": [{ "type": "required", "message": "This field is required" }]
+  }
+]
